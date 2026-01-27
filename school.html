@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>School Website</title>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-blue-600">Greenfield School</div>
+        
+        <!-- Links -->
+        <ul class="hidden md:flex space-x-6 font-medium">
+          <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#programs" class="hover:text-blue-600">Programs</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul id="menu" class="hidden md:hidden bg-white shadow-md">
+      <li><a href="#home" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+      <li><a href="#about" class="block px-4 py-2 hover:bg-gray-100">About</a></li>
+      <li><a href="#programs" class="block px-4 py-2 hover:bg-gray-100">Programs</a></li>
+      <li><a href="#contact" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-blue-600 text-white text-center px-6">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold">Welcome to Greenfield School</h1>
+      <p class="mt-4 text-lg md:text-xl">Where learning meets excellence</p>
+      <a href="#about" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-blue-600">About Us</h2>
+    <p class="mt-6 text-center text-lg text-gray-600">
+      Greenfield School has been nurturing students since 1990. Our mission is to provide
+      high-quality education that empowers students with knowledge, creativity, and leadership skills.
+    </p>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-20 bg-gray-100 px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-600">Our Programs</h2>
+    <div class="mt-10 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div class="bg-white shadow-md p-6 rounded-xl text-center">
+        <h3 class="text-xl font-bold">Primary School</h3>
+        <p class="mt-4 text-gray-600">Building strong foundations for young learners.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-xl text-center">
+        <h3 class="text-xl font-bold">Middle School</h3>
+        <p class="mt-4 text-gray-600">Encouraging curiosity and independent learning.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-xl text-center">
+        <h3 class="text-xl font-bold">High School</h3>
+        <p class="mt-4 text-gray-600">Preparing students for higher education and beyond.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-blue-600">Contact Us</h2>
+    <form class="mt-8 space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg" required>
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg" required>
+      <textarea placeholder="Your Message" rows="4" class="w-full p-3 border rounded-lg" required></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6">
+    <p>&copy; 2025 Greenfield School. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
