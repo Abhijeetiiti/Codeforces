@@ -2,20 +2,18 @@
 using namespace std;
 
 int main() {
-        int n;
-        cin >> n;
-        string s;
-        cin >> s;
-        string ans = "";
-        int p = 1;
-        int i = 0;
+    int n, total_solved = 0;
+    cin >> n;
 
-        while (i < n) {
-            ans += s[i];
-            i += p;
-            p++;
+    while (n--) {
+        int a, b, c;
+        cin >> a >> b >> c;
+        if (a + b + c >= 2) {
+            total_solved++;
         }
-
-        cout << ans << endl;
     }
+
+    cout << total_solved << endl;
+    return 0;
+}
 
